@@ -1,2 +1,21 @@
 # TODO: Add patterns to exclude from the Docker build context
 # At minimum, exclude: .git, __pycache__, .env, venv
+
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+*.egg-info/
+.git
+.gitignore
+*.md
+*.log
+node_modules/
+.pytest_cache
+.mypy_cache
+.DS_Store
+.idea
+.vscode
+*.swp
+*.swo
