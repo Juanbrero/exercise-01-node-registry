@@ -113,7 +113,6 @@ def register_node(request: NodeCreate, db: Session = Depends(get_db)):
 
         http_status = status.HTTP_201_CREATED
 
-
         return Response(
         content=json.dumps({
             "id": node.id,
