@@ -21,6 +21,7 @@ services:
       - "5432:5432"
 
   api:
+    image: exercise-01-node-registry:1.0.0
     build: .
     depends_on:
       - db

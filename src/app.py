@@ -179,7 +179,8 @@ def get_node(name: str, db: Session = Depends(get_db)):
     
     try:
 
-        node = db.query(Node).filter(Node.name == name, Node.status == "active").first()
+        # node = db.query(Node).filter(Node.name == name, Node.status == "active").first()
+        node = db.query(Node).filter(Node.name == name).first()
         if not node:
             raise ValueError("Node not found")
         
