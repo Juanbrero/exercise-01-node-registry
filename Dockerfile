@@ -14,7 +14,7 @@
 # Start command: uvicorn src.app:app --host 0.0.0.0 --port 8080
 
 # Stage 1: Build stage for dependencies
-FROM python:3.14-alpine AS builder
+FROM python:3.14.0-alpine AS builder
 WORKDIR /build
 COPY requirements.txt . 
 RUN pip install --target=/deps --no-cache-dir --no-compile -r requirements.txt && \
@@ -24,7 +24,7 @@ RUN pip install --target=/deps --no-cache-dir --no-compile -r requirements.txt &
     find /deps -type d -name "*.dist-info" -exec rm -r {} +
 
 # Stage 2: Runtime stage
-FROM python:3.14-alpine AS runtime
+FROM python:3.14.0-alpine AS runtime
 WORKDIR /app
 
 # Labels OCI
