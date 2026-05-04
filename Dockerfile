@@ -3,7 +3,7 @@
 # All of these are tested by the grader:
 #
 # [ ] Multi-stage build (2+ FROM instructions)
-# [ ] Base image: python:3.14-slim
+# [ ] Base image: python:3.14.0-slim
 # [ ] Copy requirements.txt and pip install BEFORE copying source code (layer caching)
 # [ ] Run as a non-root USER
 # [ ] EXPOSE 8080
